@@ -1,38 +1,129 @@
-.App {
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap");
+
+/* Set up some global styles */
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  margin: 0;
+}
+
+/* Style the container */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Style the title */
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+/* Style the card */
+.card {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #007bff;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  padding: 0.8rem;
+  border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.card-body {
+  padding: 2rem;
+}
+
+.card-text {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.form-control {
+  flex: 1;
+  margin-bottom: 1rem;
+  padding: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #ced4da;
+  border-radius: 0.5rem;
+}
+
+.btn {
+  padding: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  cursor: pointer;
+}
+
+.btn-loading {
+  background-color: #007bff;
+  border: none;
+  color: #ffffff;
+  animation: btn-loading 1s infinite;
+}
+
+@keyframes btn-loading {
+  0% {
+    background-color: #007bff;
+  }
+  50% {
+    background-color: #0069d9;
+  }
+  100% {
+    background-color: #007bff;
+  }
+}
+
+.result {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-top: 1rem;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.result-correct {
+  color: #28a745;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.result-incorrect {
+  color: #dc3545;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.error {
+  color: #dc3545;
+  font-size: 1rem;
+  margin-block: 0.5rem;
 }
